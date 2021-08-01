@@ -5,7 +5,10 @@ A docker workflow scripted in a makefile
 ## Usage
 
 ```bash
-# create a dev env *prompts for pass
+# write pass var to makefile *prompts for input
+make password
+
+# create a dev env
 make dev
 
 # delete the dev env
