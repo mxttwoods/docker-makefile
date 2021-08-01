@@ -1,12 +1,13 @@
 PASS = placeholder
 
-dev: password mysql mssql postgres jenkins
+dev: mysql mssql postgres jenkins
 
 password:
 	sh pass.sh
 
 reset:
-	cp makefile-e makefile
+	cp makefile.bak makefile
+	rm -rf makefile.bak
 
 mysql:
 	docker run --name mysql \
